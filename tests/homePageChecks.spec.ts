@@ -7,7 +7,21 @@ test.beforeEach(async ({ page }) => {
     homePage = new HomePage(page);
     await homePage.gotoHomePage();
 
+    await page.context().clearCookies();
+    await page.evaluate(() => {
+        sessionStorage.clear();
+    })
+
 })
+
+test.afterEach(async ({ page }) => {
+    // Additional cleanup after each test if needed
+    await page.context().clearCookies();
+    await page.evaluate(() => {
+        localStorage.clear();
+        sessionStorage.clear();
+    });
+});
 
 test('Wait for page load, allow cookies and verify hero heading', async () => {
     await homePage.verifyHeroHeading();
