@@ -1,5 +1,5 @@
 import { Locator, Page, expect } from "@playwright/test";
-import { getBaseUrl } from "../config";
+import { getSolutionsPageUrl,getBaseUrl } from "../config";
 import homePageText from "../data/HomePageText.json";
 import { acceptCookies } from "../utils/cookiesAcceptor";
 
@@ -68,7 +68,7 @@ export class HomePage {
 
     async verifySolutionsPage(){
         await expect(this.solutionsPageHeroImage()).toBeVisible();
-        await expect(this.page).toHaveURL(homePageText.homePage.solutionsPageUrl);
+        await expect(this.page).toHaveURL(getSolutionsPageUrl());
     }
 
 }   

@@ -1,7 +1,9 @@
 {
 "PROD":{
     "BASE_URL": "https://www.lucanet.com/en/",
-    "CONTACT_PAGE_URL": "https://www.lucanet.com/en/contact/"
+    "CONTACT_PAGE_URL": "https://www.lucanet.com/en/contact/",
+    "SOLUTIONS_PAGE_URL": "https://www.lucanet.com/en/solutions/"
+    
     
 }  
 }
