@@ -25,9 +25,9 @@ jobs:
       run: |
         echo '{
         "PROD": {
-            "BASE_URL": "${{ vars.PROD_BASE_URL }}",
-            "CONTACT_PAGE_URL": "${{ vars.PROD_CONTACT_PAGE_URL }}",
-            "SOLUTIONS_PAGE_URL": "${{ vars.PROD_SOLUTIONS_PAGE_URL }}"
+            "BASE_URL": "${{ vars.BASE_URL }}",
+            "CONTACT_PAGE_URL": "${{ vars.CONTACT_PAGE_URL }}",
+            "SOLUTIONS_PAGE_URL": "${{ vars.SOLUTIONS_PAGE_URL }}"
           }
         }' > config.json
 
