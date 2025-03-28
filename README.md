@@ -1,6 +1,17 @@
 # LucaNet Web Testing Framework
 
 This project contains automated tests for the Lucanet website using Playwright with TypeScript.
+The created tests are for the homepage and the contact page.
+
+For homepage tests:
+1. Wait for page load, allow cookies and verify hero heading
+2. Verify that page title is CFO Solution Platform for modern finance leaders :: Lucanet
+3. Verify that navbar is visible and enabled
+4. Verify that footer links are visible and enabled
+5. Verify that solutions page hero image is visible and enabled (after clicking on the solutions link in the navbar)
+
+For contact page tests:
+1. Fill out the contact form but do not send the request to not flood the production environment with test requests.
 
 ## Setup Instructions
 
