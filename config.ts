@@ -5,7 +5,7 @@ dotenv.config();
 
 const env = process.env.ENVIRONMENT || 'PROD';
 const environmentConfig = config[env];
-console.log(`Current environment: ${env}`);
+
 
 if (!environmentConfig) {
     throw new Error(`Environment configuration not found for ${env}`);
