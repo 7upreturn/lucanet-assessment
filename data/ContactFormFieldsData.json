@@ -1,0 +1,13 @@
+{
+    "contactForm":{
+            "firstName": "George",
+            "lastName": "Dragotoiu",
+            "businessEmail": "george.dragotoiu@lucanet.com",
+            "companyName": "Lucanet",
+            "jobTitle": "QA Automation Engineer",
+            "phoneNumber": "0740123456",
+            "country": "Romania",
+            "userMessage": "This is an automated test message, do not take it into account"
+    }
+
+}
