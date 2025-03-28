@@ -8,6 +8,9 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    environment: PROD 
+
+
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -17,6 +20,18 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+
+    - name: Create config.json with environment variables
+      run: |
+        echo '{
+        "PROD": {
+            "BASE_URL": "${{ vars.PROD_BASE_URL }}",
+            "CONTACT_PAGE_URL": "${{ vars.PROD_CONTACT_PAGE_URL }}",
+            "SOLUTIONS_PAGE_URL": "${{ vars.PROD_SOLUTIONS_PAGE_URL }}"
+          }
+        }' > config.json
+
+
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
